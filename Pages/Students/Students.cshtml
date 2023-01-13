@@ -1,0 +1,43 @@
+﻿@page
+@model CSharpWebApp.Pages.StudentsModel
+@{
+    ViewData["Title"] = "Students page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Students stuff</h1>
+</div>
+<a class='btn btn-primary btn-sm' href='/Students/Create'>New Student</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Created on</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.listStudents)
+        {
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="/Students/Edit?id=">Edit</a>
+                <a class="btn btn-primary btn-sm" href="/Students/Delete?id=">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
